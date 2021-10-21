@@ -199,15 +199,32 @@ textarea {
 	}
 }
 
+input[placeholder] {
+	color: #000;
+	font-size: 16px;
+}
+
 .input {
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
+	padding: 20px 20px;
+	background-color: #F1F1F1;
+	margin-bottom: 30px;
+	border-radius: 3px;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #000000;
+	border: 2px solid transparent;
 
-	&._focus {}
+	&._focus {
+		border: 2px solid $mainBlueHover;
+	}
 
-	&._error {}
+	&._error {
+		border: 2px solid red;
+	}
 }
 
 textarea.input {

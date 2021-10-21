@@ -2,7 +2,7 @@
 .popup {
 	-webkit-overflow-scrolling: touch;
 	z-index: 100;
-	padding: 30px 10px;
+	padding: 0px;
 	position: fixed;
 	top: 0px;
 	left: 0;
@@ -10,6 +10,17 @@
 	height: 100%;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
+
+	&__title {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 20px;
+		background-color: $mainBlue;
+		padding: 30px;
+		text-align: center;
+		color: #fff;
+	}
+
 	&::before {
 		content: "";
 		background-color: rgba(0, 0, 0, 0.9);
@@ -21,27 +32,34 @@
 		opacity: 0;
 		transition: opacity 0.8s ease 0s;
 	}
+
 	&.show {
 		visibility: visible;
 		overflow: auto;
+
 		&::before {
 			opacity: 1;
 		}
+
 		.popup__body {
 			transform: scale(1);
 		}
 	}
+
 	&._active {
 		overflow: auto;
 		visibility: visible;
+
 		&::before {
 			opacity: 1;
 		}
+
 		.popup__body {
 			transition: all 0.3s ease 0.2s;
 			transform: scale(1);
 		}
 	}
+
 	// .popup__content
 	&__content {
 		display: flex;
@@ -54,26 +72,106 @@
 		justify-content: center;
 		align-items: center;
 	}
+
 	// .popup__body
 	&__body {
+		position: relative;
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
 		background-color: #fff;
-		padding: 50px;
 		width: 100%;
-		max-width: 800px;
+		max-width: 600px;
 	}
+
 	// .popup__close
 	&__close {
 		width: 15px;
 		height: 15px;
 		position: absolute;
-		top: 0px;
-		right: 0px;
+		top: 10px;
+		right: 10px;
 		cursor: pointer;
 		z-index: 30;
-		background: url("../img/icons/close.svg") 0 0 no-repeat;
+		color: $mainWhite;
+		// background: url("../img/icons/close.svg") 0 0 no-repeat;
 	}
 }
+
+.popup__forma {
+	padding: 30px;
+}
+
+
+.popup__send {
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: center;
+	padding: 50px 0px 0 0;
+}
+
+.popup__send-text {
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.popup_social {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+}
+
+
+.link-soc a {
+	background-color: #43d854;
+	border-radius: 30px;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-weight: 500;
+	font-size: 15px;
+	transition: all 0.3s ease 0s;
+
+	@media (max-width:$md4+px) {
+		margin-bottom: 15px;
+
+	}
+
+	&:hover {
+		background-color: #1ca22c;
+	}
+}
+
+.soc-itme {
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+.telegram a {
+	background-color: #0088cc;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		background-color: #015077;
+	}
+
+	& img {
+		color: #fff;
+	}
+}
+
 //====================================================================================================
+.form__error {
+	margin-top: -25px;
+	font-size: 12px;
+	color: red;
+	margin-bottom: 20px;
+}
+
 //====================================================================================================
