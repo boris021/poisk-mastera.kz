@@ -8,7 +8,7 @@
 	<div class="wrapper">
 		@@include('_header.html',{})
 		<main class="page">
-			<section class="main">
+			<section class="main home">
 				<div class="main__container _container">
 					<div class="main__body">
 						<h2 class="main__subtitle"><span>Мы предоставляем </span>большой спектр услуг</h2>
@@ -24,7 +24,7 @@
 				<div class="main-bg _ibg"></div>
 			</section>
 
-			<section class="service">
+			<section class="service" id="service">
 				<div class="service__container _container">
 					<h2 class="service__title title">НАШИ УСЛУГИ</h2>
 					<div class="service__subtitle subtitle">Мы предоставляем большой спектр услуг,
@@ -303,7 +303,7 @@
 								<div class="work__text work__item-text">Оставьте свои контакты и наши менеджеры перезвонят вам в
 									ближайшее время
 								</div>
-								<a href="" class="work__item-btn button button-blue">Оставить заявку</a>
+								<a href="" class="work__item-btn-white button button-blue">Оставить заявку</a>
 
 							</div>
 							<div class="work__item">
@@ -315,6 +315,46 @@
 									<img src="img/05.png" alt="icon" class="work__number">
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact">
+				<div class="contact__container _container">
+					<div class="contact__body">
+						<div class="contact__text">
+							<div class="contact__title">Наши контакты</div>
+							<div class="contact__link-title">Телефоны:</div>
+							<a href="#" class="contact__link-phone">+7 000 000 0000</a> <br>
+							<a href="#" class="contact__link-phone">+7 000 000 0000</a>
+							<div class="contact__title-email">E-mail:</div>
+							<a href="mailto:info@poisk-mastera.kz" class="contact__link-email">info@poisk-mastera.kz</a>
+							<div class="contact__title-rekvizit">Наши реквизиты:</div>
+							<a href="#" class="contact__link-rekvizit">Скачать реквизиты</a>
+							<div class="contact__title-social">Мы в соц сетях:</div>
+							<div class="contact__link-social-items">
+								<a href="" class="contact__social-icon"><img src="img/icons/whatsapp.svg" alt="whatsapp"></a>
+								<a href="" class="contact__social-icon"><img src="img/icons/telegram.svg" alt="telegram"></a>
+								<a href="" class="contact__social-icon-insta"><img src="img/icons/instagram.svg"
+										alt="instagram"></a>
+							</div>
+						</div>
+						<div class="contact__forms">
+							<div class="contact__title-forms">У вас остались вопросы?</div>
+							<div class="contact__subtitle-forms">заполните форму и мы перезвоним вас
+								в течении 30-ти минут!</div>
+							<form data-message="send" data-ajax="true" data-test="test" action="sendmail.php" method="POST"
+								class="form">
+								<input id="inp" type="hidden" name="hidden" value="У вас остались вопросы?"></p>
+								<input id="inp1" autocomplete="on" type="name" name="form[]" data-value=""
+									class="input name _req" placeholder="Ваше имя">
+								<input autocomplete="on" type="tel" name="form[]" data-value="" class="input _phone _req"
+									placeholder="Телефон">
+								<input id="inp2" autocomplete="on" type="textarea" name="form[]" data-value="" class="input"
+									placeholder="Ваш вопрос">
+								<button type="submit" class="button button-blue">Отправить</button>
+							</form>
 						</div>
 					</div>
 				</div>
